@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Options</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgba(0, 120, 255, 0.5), rgba(0, 0, 255, 0.5));
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .options-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  input[type='range'] {
+    width: calc(100% - 10px);
+    margin-top: 5px;
+  }
+
+  input[type='color'] {
+    width: calc(100% - 10px);
+    margin-top: 5px;
+  }
+
+  select {
+    width: calc(100% - 10px);
+    margin-top: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="options-column">
+    <h2>Text Options</h2>
+
+    <!-- Font Selection -->
+    <label for="fontSelect">Font:</label>
+    <select id="fontSelect">
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="Times New Roman, serif">Times New Roman</option>
+      <option value="Verdana, Geneva, sans-serif">Verdana</option>
+    </select>
+
+    <!-- Character Size -->
+    <label for="charSizeRange">Character Size:</label>
+    <input type="range" id="charSizeRange" min="10" max="30" step="1" value="16">
+
+    <!-- Character Space -->
+    <label for="charSpaceRange">Character Space:</label>
+    <input type="range" id="charSpaceRange" min="-1" max="1" step="0.1" value="0">
+  </div>
+
+  <div class="options-column">
+    <h2>Color Options</h2>
+
+    <!-- Font Color -->
+    <label for="fontColorSelect">Font Color:</label>
+    <input type="color" id="fontColorSelect">
+
+    <!-- Page Color -->
+    <label for="pageColorSelect">Page Color:</label>
+    <input type="color" id="pageColorSelect">
+
+    <!-- Character Color -->
+    <label for="charColorSelect">Character Color:</label>
+    <input type="color" id="charColorSelect">
+  </div>
+</div>
+
+<script>
+  // Font Selection
+  const fontSelect = document.getElementById('fontSelect');
+  fontSelect.addEventListener('change', function() {
+    document.body.style.fontFamily = this.value;
+  });
+
+  // Character Size
+  const charSizeRange = document.getElementById('charSizeRange');
+  charSizeRange.addEventListener('input', function() {
+    document.body.style.fontSize = this.value + 'px';
+  });
+
+  // Character Space
+  const charSpaceRange = document.getElementById('charSpaceRange');
+  charSpaceRange.addEventListener('input', function() {
+    document.body.style.letterSpacing = this.value + 'em';
+  });
+
+  // Font Color
+  const fontColorSelect = document.getElementById('fontColorSelect');
+  fontColorSelect.addEventListener('input', function() {
+    document.body.style.color = this.value;
+  });
+
+  // Page Color
+  const pageColorSelect = document.getElementById('pageColorSelect');
+  pageColorSelect.addEventListener('input', function() {
+    document.body.style.background = this.value;
+  });
+
+  // Character Color
+  const charColorSelect = document.getElementById('charColorSelect');
+  charColorSelect.addEventListener('input', function() {
+    document.body.style.color = this.value;
+  });
+</script>
+</body>
+</html>
