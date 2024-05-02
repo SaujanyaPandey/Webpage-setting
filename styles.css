@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Light blue background */
+    color: #00008b; /* Dark blue font color */
+}
+
+header {
+    background-color: #e6f0ff; /* Lighter blue for the header */
+    color: #00008b;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+
+main {
+    min-height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#settings {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    #settings label,
+    #settings select,
+    #settings input {
+        margin: 0 10px;
+    }
+
+        #settings input[type="range"] {
+            cursor: ew-resize;
+        }
+
+.game-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #ccc; /* Visible border for buttons */
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .game-buttons button:hover {
+        background-color: #ccc;
+        transform: scale(1.1);
+    }
+
+.game-info {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tictactoe-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.tictactoe-row {
+    display: flex;
+}
+
+.tictactoe-square {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 1px solid black;
+    margin: 0;
+}

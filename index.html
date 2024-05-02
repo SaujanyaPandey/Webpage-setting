@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Games for All!!</h1>
+        <nav>
+            <ul>
+                <li><a href="#!" onclick="showGame('hangman')">Hangman</a></li>
+                <li><a href="#!" onclick="showGame('ticTacToe')">Tic Tac Toe</a></li>
+                <li><a href="#!" onclick="showGame('rockPaperScissors')">Rock Paper Scissors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="settings">
+        <label for="bgColor">Background Color:</label>
+        <input type="color" id="bgColor" onchange="changeBackgroundColor(this.value)">
+        <label for="fontSelect">Choose Font:</label>
+        <select id="fontSelect" onchange="changeFont(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+        <label for="fontSizeRange">Font Size:</label>
+        <input type="range" id="fontSizeRange" min="12" max="24" value="16" onchange="changeFontSize(this.value + 'px')">
+    </div>
+    <main id="gameArea">
+        <!-- Game content will be loaded here -->
+    </main>
+    <footer>
+        <p>© 2024 FunZone Games</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
